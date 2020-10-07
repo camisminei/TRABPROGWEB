@@ -1,0 +1,58 @@
+body{
+    margin: auto;
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/gradienta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.box{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+img{
+    height: 25%;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+div{
+    padding: 10px;
+}
+
+button{
+    margin-top: 10px;
+    background-color: green;
+    border: none;
+    width: 80%;
+    height: 10%;
+    border-radius: 5px;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+input{
+    width: 80%;
+    height: 10%;
+    border: none;
+    border-bottom: 1px solid silver;
+}
