@@ -1,22 +1,40 @@
 div .nav{
     position: relative;
-}
-
-img{
-    height: 8%;
-}
-
-.nav{
+    height: 10%;
+    display: flex;
+    align-items: center;
     padding: 2%;
 }
 
+img{
+    height: 45%;
+}
+
 label{
+    margin-left: 1%;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-div .nav label{
-    margin-left: 1%;
+div .nav img label input{
+    /*margin-left: 1%;*/
     position: absolute;
     top: 50%; 
     transform: translate(0, -50%);
+}
+
+div .nav .lupa{
+    margin-left: 60%;
+}
+
+div .nav input{
+    margin-left: 1%;
+    height: 50%;
+    width: 20%;
+}
+
+::placeholder{
+    padding: 2%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: medium;
+    color: silver;
 }
