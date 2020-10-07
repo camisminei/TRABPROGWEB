@@ -28,16 +28,17 @@ body{
 
 img{
     height: 25%;
-    margin-bottom: 15px;
-    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 div{
-    padding: 10px;
+    padding: 8px;
 }
 
 button{
     margin-top: 10px;
+    margin-bottom: 10px;
     background-color: green;
     border: none;
     width: 80%;
@@ -55,4 +56,10 @@ input{
     height: 10%;
     border: none;
     border-bottom: 1px solid silver;
+}
+
+div .links a{
+    font-size: 12px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
