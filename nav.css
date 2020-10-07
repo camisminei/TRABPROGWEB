@@ -1,0 +1,22 @@
+div .nav{
+    position: relative;
+}
+
+img{
+    height: 8%;
+}
+
+.nav{
+    padding: 2%;
+}
+
+label{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+div .nav label{
+    margin-left: 1%;
+    position: absolute;
+    top: 50%; 
+    transform: translate(0, -50%);
+}
