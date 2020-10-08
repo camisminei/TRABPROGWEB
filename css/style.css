@@ -1,0 +1,33 @@
+body{
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    overflow: hidden;
+}
+.card-colunas{
+    height: 80%;
+    width: 90%;
+    /*border: 1px solid silver;*/
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+.col{
+    width: 22%;
+    height: 100%;
+    border-right: 2px solid #1E90FF;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+label{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: large;
+    color: #696969;
+}
+
+.domingo{
+    border-right: 0px;
+}
+
