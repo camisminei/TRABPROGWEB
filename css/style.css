@@ -15,7 +15,7 @@ body{
     width: 22%;
     height: 100%;
     border-right: 2px solid #1E90FF;
-    /*box-sizing: content-box;*/
+    box-sizing: content-box;
     overflow: auto;
     padding: 2%;
 }
@@ -35,14 +35,22 @@ label{
 
 .card-col{
     margin: auto;
-    width: 70%;
+    width: 30%;
     background-color: aqua;
     border-radius: 5px;
     padding: 5%;
     margin-top: 10%;
+    display: block;
 }
 
-.card-col img{
-    height: 10px;
-    margin-left: 4%;
+#card-col img{
+    height: 20px;
+    padding: 1px;
+}
+
+.col div{
+    /*display: flex;*/
+    float: left;
+    /*text-align: center;*/
+    margin: 0px 0px 0px 0px;
 }
