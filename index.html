@@ -4,13 +4,14 @@
         <title>Organizador de Tarefas</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/card-style.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
         <script src="js/script.js"></script>
     </head>
     <body>
         <div class="card">
             <div class="nav">
-                <img src="img/add (2).svg" alt="add" onclick="">
+                <img src="img/add (2).svg" alt="add" onclick="add.addCard()">
                 <label for="">Criar Tarefa</label>
 
                 <img src="img/search.svg" alt="search" class="lupa">
@@ -19,6 +20,7 @@
             <div class="card-colunas">
                 <div class="col segunda">
                     <label for="">Segunda</label>
+                    <div id="card-col"></div>
                 </div>
                 <div class="col terca">
                     <label for="">Terça</label>

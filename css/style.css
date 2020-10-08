@@ -31,3 +31,16 @@ label{
     border-right: 0px;
 }
 
+.card-col{
+    margin: auto;
+    width: 70%;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 5%;
+    margin-top: 10%;
+}
+
+.card-col img{
+    height: 10px;
+    margin-left: 4%;
+}

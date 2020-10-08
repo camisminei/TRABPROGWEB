@@ -1,59 +1,64 @@
 ﻿<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Formulario</title>
-        <link rel="stylesheet" href="">
-        <script src=""></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="card-forms">
-                <p>&nbsp;</p>
-                <div>
-                    <h1>Nova Tarefa</h1>
-                </div>
-                <div class="forms">
-                    <form action="/my-handling-form-page" method="post">
-                        <ul>
-                            <li>
-                                <label for="titulo">Titulo:</label>
-                                <input id="titulo" name="evento_nome" type="text" />
-                            </li>
-                            <li>
-                                <label for="data">Data limite:</label>
-                                <input id="data" name="evento_data" type="date" />
-                            </li>
-                            <!--- aqui o horario---->
-                            <li>
-                                <label for="hora_tarefa">Escolha o hor&aacute;rio da tarefa: </label> 
-                                <input id="hora-hora_tarefa" name="hora_tarefa" type="time" value="13:30" />at&eacute;
-                                <input id="hora-hora_tarefa" name="hora_tarefa" type="time" value="15:30" />
-                            </li>
-                            <li>
-                                Dia da semana:
-                                <select id="dia_semana" name="dia_semana">
-                                    <option selected="selected" value="">Domingo</option>
-                                    <option selected="selected" value="">Segunda-feira</option>
-                                    <option selected="selected" value="">Ter&ccedil;a-feira</option>
-                                    <option selected="selected" value="">Quarta-feira</option>
-                                    <option selected="selected" value="">Quinta-feira</option>
-                                    <option selected="selected" value="">Sexta-feira</option>
-                                    <option selected="selected" value="">Sabado</option>
-                                </select>
-                                <br/>
-                                <br/>
-                            </li>
-                            <li>
-                                <label for="descricao">Descreva sua tarefa:</label> 
-                                <textarea id="descricao" name="evento_descricao"></textarea>
-                            </li>
-                        </ul>
-                    </form>
+<head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <link rel="stylesheet" href="css/nova_tarefa.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card-forms">
+            <p>&nbsp;</p>
+            <div class="nav">
+                <h1>Nova Tarefa</h1>
+                <a href="index.html"> <img src="img/close.svg" alt="fecha" style="width:35px;height:35px;"></a>
+            </div>
+            <div class="forms">
+                <form action="/my-handling-form-page" method="post">
+                    
+                    <div>
+                        <label>Titulo:</label>
+                        <input id="titulo" name="evento_nome" type="text" />
+                    </div>
+                    <div>
+                        
+                        <label for="data">Data limite:</label>
+                        <input id="data" name="evento_data" type="date" />
+                    </div>
+
+                    <div>
+                        <label for="hora_tarefa">Hor&aacute;rio: </label>
+                        <input id="hora-hora_tarefa" name="hora_tarefa" type="time" value="13:30" />at&eacute;
+                        <input id="hora-hora_tarefa" name="hora_tarefa" type="time" value="15:30" />
+                    </div>
+
+                    <div>
+                        <label for="dia_semana">Dia da semana:</label>
+                        <select id="dia_semana" name="dia_semana">
+                            <option selected="selected" value="">Domingo</option>
+                            <option selected="selected" value="">Segunda-feira</option>
+                            <option selected="selected" value="">Ter&ccedil;a-feira</option>
+                            <option selected="selected" value="">Quarta-feira</option>
+                            <option selected="selected" value="">Quinta-feira</option>
+                            <option selected="selected" value="">Sexta-feira</option>
+                            <option selected="selected" value="">Sabado</option>
+                        </select>
+                        <br />
+                        <br />
+                    </div>
+
+                    <div>
+                        
+                        <textarea id="descricao" name="evento_descricao" placeholder="Descreva sua tarefa"></textarea>
+                    </div>
+
+                        
                     <div>
                         <button type="submit">Salvar</button>
                     </div>
-                </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
