@@ -20,9 +20,8 @@ class AdicaoCard{
             else{
                 check.setAttribute("src","img/circle-outline.png");
             }
-            
         })
-        
+
         novoCard.className="card-col";
         novoCard.innerHTML = "Aqui";
 

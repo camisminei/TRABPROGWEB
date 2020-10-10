@@ -2,6 +2,7 @@ body{
     padding: 2px;
     overflow: hidden;
 }
+
 .card-colunas{
     height: 80%;
     width: 90%;
@@ -15,10 +16,12 @@ body{
     width: 22%;
     height: 100%;
     border-right: 2px solid #1E90FF;
-    box-sizing: content-box;
     overflow: auto;
     padding: 2%;
+    /*display: flex;*/
+    box-sizing: border-box;
 }
+
 .col::-webkit-scrollbar {
     display: none;
 }
@@ -35,22 +38,28 @@ label{
 
 .card-col{
     margin: auto;
-    width: 30%;
-    background-color: aqua;
+    width: 60%;
+    height: 10%;
     border-radius: 5px;
     padding: 5%;
-    margin-top: 10%;
-    display: block;
+    background-color: #4ea7ffc2;
+    border: 1px solid #4ea7ffd7;
 }
 
 #card-col img{
     height: 20px;
-    padding: 1px;
 }
 
-.col div{
-    /*display: flex;*/
+#card-col div{
     float: left;
-    /*text-align: center;*/
-    margin: 0px 0px 0px 0px;
+    
+}
+.col .segunda{
+    display: flex;
+    /*position: relative;
+    align-items: center;*/
+}
+
+div .card-col{
+    margin-left: 12%;
 }
