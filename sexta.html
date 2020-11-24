@@ -4,11 +4,8 @@
     <meta charset="utf-8" />
     <title>TO DO APP</title>
     <link rel="stylesheet" href="./css/index2.css" />
-    <link href="./css/card-modal.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="./css/modal.css" rel="stylesheet" />
     <script src="./js/index2.js"></script>
-    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -29,28 +26,11 @@
             <div id="topnav-hidden">
                 <i class="material-icons" id="openbtn" onclick="gerencia.openNav()">list</i>
             </div>
-            <i class="material-icons" id="create-new-file" onclick="gerencia.abrirModal()">create_new_folder</i>
-            <label for="">TODOS</label>
+            <i class="material-icons" id="create-new-file" onclick="">create_new_folder</i>
+            <label for="">SEXTA</label>
             <input type="text" placeholder="Busca" value="">
         </div>
-        <div id="card-todos">
-            <div id="card"></div>
-            <div id="modal-forms" class="modal">
-                <div class="align-left">
-                    <label for="">Informe uma Data: </label>
-                    <input type="text" placeholder="Ex: 14/02/2020" class="data-texto">
-                </div>
-                <div class="align-left">
-                    <label for="">Descrição: </label>
-                    <input type="text" class="descricao" placeholder="Ex: Escreva uma nota">
-                </div>
-                <div>
-                    <button onclick="gerencia.fecharModal()" id="cancelar">Cancelar</button>
-                    <button onclick="add.addCard(),gerencia.fecharModal()" id="salvar">Salvar</button>
-                </div>
-            </div>
-        </div>
-        
+        <div id="card-todos"></div>
     </div>
 </body>
 
