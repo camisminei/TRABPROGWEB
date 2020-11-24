@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>TO DO APP</title>
+    <link rel="stylesheet" href="./css/index2.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="./js/index2.js"></script>
+</head>
+
+<body>
+    <div class="container">
+            <nav id="topnav">
+                <i class="material-icons" id="closebtn" onclick="gerencia.closeNav()">close</i>
+                <a href="">Segunda</a>
+                <a href="">Terça</a>
+                <a href="">Quarta</a>
+                <a href="">Quinta</a>
+                <a href="">Sexta</a>
+                <a href="">Sábado</a>
+                <a href="">Domingo</a>
+                <a href="">Todos</a>
+                <a href="./login.html">Sair</a>
+            </nav>
+        <div id="top-add-hidden-search">
+            <div id="topnav-hidden">
+                <i class="material-icons" id="openbtn" onclick="gerencia.openNav()">list</i>
+            </div>
+            <i class="material-icons" id="create-new-file" onclick="">create_new_folder</i>
+            <input type="text" placeholder="Busca" value="">
+        </div>
+        <div id="card-todos"></div>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,7 @@
-Links uteis:
+Grupo:
 
-Flaticon (icones gratuitos) -> se for utilizar os icones, colocar entro da pasta img.
-https://www.flaticon.com/authors/roundicons
+Camila Minei
+
+Fellipe Oliveira
+
+Luciano Esquer
