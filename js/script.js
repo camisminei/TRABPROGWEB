@@ -1,52 +1,70 @@
 class AdicaoCard{
 
-    addCard(){
-        var novoCard = document.createElement("div");
-        /*var novoCard2 = document.createElement("div");*/
-
-        /*let check = document.createElement("img");*/
-        let imgExcluir = document.createElement("img");
-        let imgEditar = document.createElement("img");
-
-        imgExcluir.src = "img/trash.svg";
-        imgEditar.src = "img/pencil.svg";
-
-        /*check.src = "img/circle-outline.png";
-        check.addEventListener("click", function(){
-
-            if(check.getAttribute("src") === "img/circle-outline.png"){
-                check.setAttribute("src","img/check.png");
-            }
-            else{
-                check.setAttribute("src","img/circle-outline.png");
-            }
-        })*/
-
-        novoCard.className="card";
-        novoCard.innerHTML = "Aqui";
-
-
-        /*novoCard2.appendChild(check);
-        document.getElementById("card").appendChild(novoCard2);*/
-        
-
-        novoCard.appendChild(imgEditar);
-        novoCard.appendChild(imgExcluir);
-
-        document.getElementById("card").appendChild(novoCard);
-        imgExcluir.setAttribute("onclick",`add.excluir_tela()`);
-
-    }
-    excluir_tela(){
-        alert("clique em 'ok' para excluir");
-       //let novadiv = document.createElement("div");
-
-       // document.getElementById("divexcluir").innerHTML = '<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">tarefa x</h5><button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>deseja deletar essa tarefa?</p></div><div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Excluir</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button></div></div></div></div>';
-       // document.getElementById("divexcluir").appendChild(novadiv);
-        //alert("teste2");
-
+    constructor(){
+        this.titulo = "";
+        this.descriçao = "";
+        this.contador = 0;
+        this.idEditar = null;
     }
 
+    lerDados(){
+        this.titulo = document.getElementById('titulo').value;
+        this.descriçao = document.getElementById('descricao').value;
+    }
+
+    inserirCard(){
+        this.lerDados();
+
+        if(this.titulo != "" && this.descriçao != ""){
+            let novoCard = document.createElement("div");
+            let linhaTitulo = document.createElement("h4");
+            let linhaDescricao = document.createElement("label");
+            let imgEditar = document.createElement('img');
+            let imgExcluir = document.createElement('img');
+
+            novoCard.id = this.contador;
+            this.contador++;
+
+            imgEditar.setAttribute('src', 'img/pencil.svg');
+            imgExcluir.setAttribute('src', 'img/trash.svg');
+
+            imgExcluir.setAttribute('onclick', `gerenciar.excluirCampo('${novoCard.id}')`);
+
+            novoCard.className="card";
+            linhaTitulo.innerText = this.titulo;
+            linhaDescricao.innerText = this.descriçao;
+
+
+            novoCard.appendChild(linhaTitulo);
+            novoCard.appendChild(linhaDescricao);
+            novoCard.appendChild(imgEditar);
+            novoCard.appendChild(imgExcluir);
+            document.getElementById("card").appendChild(novoCard);
+        }
+        else{
+            alert("Obrigatório preencher todos os campos!");
+        }
+        this.limparCampo();
+    }
+
+    limparCampo(){
+        this.titulo = document.getElementById('titulo').value = "";
+        this.descriçao = document.getElementById('descricao').value = "";
+    }
+
+    editarCampo(id){
+
+        document.getElementById('titulo').value = document.getElementById(id).children[0].textContent
+        document.getElementById('descricao').value = document.getElementById(id).children[1].textContent
+
+        this.idEditar = id
+
+    }
+    excluirCampo(id){
+        if(confirm("Tem ctz que deseja excluir este campo?")){
+            document.getElementById(id).remove()
+        }
+    }
 
 }
-let add = new AdicaoCard();
+let gerenciar = new AdicaoCard();

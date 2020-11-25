@@ -1,37 +1,57 @@
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>TO DO APP</title>
+        <link rel="stylesheet" href="./css/index2.css" />
+        <link href="./css/card-modal.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="./css/modal.css" rel="stylesheet" />
+        <script src="./js/index2.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <title>TO DO APP</title>
-    <link rel="stylesheet" href="./css/index2.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <script src="./js/index2.js"></script>
-</head>
-
-<body>
-    <div class="container">
-            <nav id="topnav">
-                <i class="material-icons" id="closebtn" onclick="gerencia.closeNav()">close</i>
-                <a href="./segunda.html">Segunda</a>
-                <a href="./terca.html">Terça</a>
-                <a href="./quarta.html">Quarta</a>
-                <a href="./quinta.html">Quinta</a>
-                <a href="./sexta.html">Sexta</a>
-                <a href="./sabado.html">Sábado</a>
-                <a href="./domingo.html">Domingo</a>
-                <a href="./index2.html">Todos</a>
-                <a href="./login.html">Sair</a>
-            </nav>
-        <div id="top-add-hidden-search">
-            <div id="topnav-hidden">
-                <i class="material-icons" id="openbtn" onclick="gerencia.openNav()">list</i>
+    <body>
+        <div class="container">
+            <div id="menu-container">
+                <nav id="topnav">
+                    <i class="material-icons" id="closebtn" onclick="gerencia.closeNav()">close</i>
+                    <a href="./segunda.html">Segunda</a>
+                    <a href="./terca.html">Terça</a>
+                    <a href="./quarta.html">Quarta</a>
+                    <a href="./quinta.html">Quinta</a>
+                    <a href="./sexta.html">Sexta</a>
+                    <a href="./sabado.html">Sábado</a>
+                    <a href="./domingo.html">Domingo</a>
+                    <a href="./login.html">Sair</a>
+                </nav>
+                <div id="top-add-hidden-search">
+                    <div id="topnav-hidden">
+                        <i class="material-icons" id="openbtn" onclick="gerencia.openNav()">list</i>
+                    </div>
+                    <i class="material-icons" id="create-new-file" onclick="gerencia.abrirModal()">create_new_folder</i>
+                    <label for="">SEXTA</label>
+                    <input type="text" placeholder="Busca" value="">
+                </div>
             </div>
-            <i class="material-icons" id="create-new-file" onclick="">create_new_folder</i>
-            <label for="">SEXTA</label>
-            <input type="text" placeholder="Busca" value="">
+            <div id="modal-forms" class="modal">
+                <div class="align-left">
+                    <label for="">Informe uma Data: </label>
+                    <input type="text" placeholder="Ex: 14/02/2020" id="titulo">
+                </div>
+                <div class="align-left">
+                    <label for="">Descrição: </label>
+                    <input type="text" id="descricao" placeholder="Ex: Escreva uma nota">
+                </div>
+                <div>
+                    <button onclick="gerencia.fecharModal()" id="cancelar">Cancelar</button>
+                    <button onclick="gerenciar.inserirCard(),gerencia.fecharModal()" id="salvar">Salvar</button>
+                </div>
+            </div>
+            <div id="card-todos">
+                <div id="card">
+                </div>
+            </div>
+            
         </div>
-        <div id="card-todos"></div>
-    </div>
-</body>
-
+    </body>
 </html>
