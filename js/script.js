@@ -29,6 +29,7 @@ class AdicaoCard{
             imgExcluir.setAttribute('src', 'img/trash.svg');
 
             imgExcluir.setAttribute('onclick', `gerenciar.excluirCampo('${novoCard.id}')`);
+            imgEditar.setAttribute('onclick', `gerenciar.editarCampo('${novoCard.id}')`);
 
             novoCard.className="card";
             linhaTitulo.innerText = this.titulo;
@@ -54,15 +55,16 @@ class AdicaoCard{
 
     editarCampo(id){
 
-        document.getElementById('titulo').value = document.getElementById(id).children[0].textContent
-        document.getElementById('descricao').value = document.getElementById(id).children[1].textContent
+        document.getElementById('titulo').value = document.getElementById(id).children[0].textContent;
+        document.getElementById('descricao').value = document.getElementById(id).children[1].textContent;
+        document.getElementById("modal-forms").style.opacity = 1;
 
-        this.idEditar = id
+        this.idEditar = id;
 
     }
     excluirCampo(id){
         if(confirm("Tem ctz que deseja excluir este campo?")){
-            document.getElementById(id).remove()
+            document.getElementById(id).remove();
         }
     }
 
