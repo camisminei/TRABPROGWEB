@@ -6,11 +6,11 @@
         <link href="./css/card-modal.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="./css/modal.css" rel="stylesheet" />
-        <script src="./js/index2.js"></script>
-        <script src="./js/script.js"></script>
+        <script src="./js/controllerScript.js"></script>
+        <script src="./js/semanaController.js"></script>
     </head>
 
-    <body>
+    <body onload="gerenciar.atualizarEstado()">
         <div class="container">
             <div id="menu-container">
                 <nav id="topnav">
@@ -44,12 +44,11 @@
                 </div>
                 <div>
                     <button onclick="gerencia.fecharModal()" id="cancelar">Cancelar</button>
-                    <button onclick="gerenciar.inserirCard(),gerencia.fecharModal()" id="salvar">Salvar</button>
+                    <button onclick="gerenciar.salvar(),gerencia.fecharModal()" id="salvar">Salvar</button>
                 </div>
             </div>
             <div id="card-todos">
-                <div id="card">
-                </div>
+                <div id="card"></div>
             </div>
             
         </div>
