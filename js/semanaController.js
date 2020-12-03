@@ -52,7 +52,7 @@ class Controller{
 
     atualizarEstado() {
         if (localStorage.getItem('cards') != null) {
-            this.cards = JSON.parse(localStorage.getItem('cards'))
+            this.cards = JSON.parse(localStorage.getItem('cards')) //analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string
         }
 
         if (localStorage.getItem('geradorId') != null) {
@@ -64,7 +64,7 @@ class Controller{
 
     sincronizarLocalStorage(){
         console.log(this.cards);
-        localStorage.setItem('cards', JSON.stringify(this.cards));
+        localStorage.setItem('cards', JSON.stringify(this.cards)); // converte valores em js para string
         localStorage.setItem('geradorId', this.geradorId);
     }
 
@@ -79,7 +79,6 @@ class Controller{
                 this.salvarEdicao(card);
             }
         }
-
         this.limparCampos();
         this.sincronizarLocalStorage();
         this.gerarCard(); 
@@ -129,8 +128,8 @@ class Controller{
             }
 
             if (achou) {
-                this.cards.splice(i, 1)
-                this.gerarCard()
+                this.cards.splice(i, 1);
+                this.gerarCard();
             }
         }
     }
@@ -157,7 +156,7 @@ class Controller{
             description.innerText = this.cards[i].descricao;
 
             novoCard.className = "card";
-            novoCard.appendChild(title);
+            novoCard.appendChild(title); //insere um novo nó no dom
             novoCard.appendChild(description);
             novoCard.appendChild(imgEditar);
             novoCard.appendChild(imgExcluir);
