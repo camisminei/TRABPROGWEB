@@ -130,7 +130,9 @@ class Controller{
             if (achou) {
                 this.cards.splice(i, 1);
                 this.gerarCard();
+                this.sincronizarLocalStorage();
             }
+            
         }
     }
 
